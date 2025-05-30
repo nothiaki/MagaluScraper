@@ -1,0 +1,15 @@
+services:
+
+  scraping-service:
+    build: ./scraping-service
+    container_name: scraping-service
+    ports:
+      - 8090:8080
+    restart: no
+    networks:
+      - dev
+
+networks:
+
+  dev:
+    driver: bridge
